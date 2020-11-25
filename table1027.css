@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+#a {
+    font-size: 25px;
+    /*font-style: italic;*/
+    font-style: oblique;
+}
+
+table {
+    border: 4px solid lightcyan;
+    border-collapse: separate;
+    border-radius: 1px 1px 12px 12px;
+    border-spacing: 5px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+th {
+    border: 1px solid midnightblue;
+    padding: 15px;
+    text-align: center;
+    background-color:lightskyblue;
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+td {
+    border: 1px solid darkslategrey;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: lightseagreen;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+div.operation_add {
+    line-height: 40px;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    background-color: lightblue;
+    font-size: 20px;
+    margin: 40px auto 0;
+    border: 2px solid darkslategray;
+    opacity: 0.85;
+}
+
+/*.demo-non-form {*/
+/*    color: initial;*/
+/*    width: 100%;*/
+/*    padding: 10px;*/
+/*    margin: 6px 0 12px 0;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 0;*/
+/*    font-family: arial, verdana, sans-serif;*/
+/*    font-size: 14px;*/
+/*    box-sizing: border-box;*/
+/*    -webkit-appearance: none;*/
+/*}*/
+
+/*.external-container button.external-button {*/
+/*    font-weight: 400;*/
+/*    padding: 10px;*/
+/*    margin: 6px 0 13px 0;*/
+/*    width: 100%;*/
+/*}*/
