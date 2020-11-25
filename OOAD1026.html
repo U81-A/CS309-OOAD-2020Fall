@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="table.css"/>
+    <script type="text/javascript" src="table.js">
+        // document.body.onload = function () {k\/
+        //     setDay();
+        //     setMonth();
+        // };
+    </script>
+</head>
+<body onload="initial()">
+<table>
+    <caption id="a"><h2>Flight List</h2></caption>
+    <tr>
+        <th>Flight No.</th>
+        <th>Airline Company</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th></th>
+    </tr>
+    <tbody id="tbody" style="display: none">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <input type="button" value="Delete" onclick="removeRow(this)">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!--<table border="1" cellpadding="10" cellspacing="5">-->
+<!--    <caption id="a"><h2>Flight List</h2></caption>-->
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--        <th>Flight No.</th>-->
+<!--        <th>Airline Company</th>-->
+<!--        <th>From</th>-->
+<!--        <th>To</th>-->
+<!--        <th>Date</th>-->
+<!--        <th>Departure Time</th>-->
+<!--        <th>Arrival Time</th>-->
+<!--    </tr>-->
+<!--    <tr bgcolor="#faebd7">-->
+<!--        <td>ZH1858</td>-->
+<!--        <td>Shenzhen Airlines</td>-->
+<!--        <td>SHA</td>-->
+<!--        <td>PEK</td>-->
+<!--        <td>2020/09/25</td>-->
+<!--        <td>07:55</td>-->
+<!--        <td>10:10</td>-->
+<!--    </tr>-->
+<!--    <tr bgcolor="#faebd7">-->
+<!--        <td>MU5479</td>-->
+<!--        <td>Eastern Airlines</td>-->
+<!--        <td>TAO</td>-->
+<!--        <td>WUH</td>-->
+<!--        <td>2020/09/25</td>-->
+<!--        <td>13:40</td>-->
+<!--        <td>15:55</td>-->
+<!--    </tr>-->
+<!--    <tr bgcolor="#faebd7">-->
+<!--        <td>CA5795</td>-->
+<!--        <td>Air China</td>-->
+<!--        <td>KMG</td>-->
+<!--        <td>CKG</td>-->
+<!--        <td>2020/09/20</td>-->
+<!--        <td>06:50</td>-->
+<!--        <td>08:25</td>-->
+<!--    </tr>-->
+<!--    <tr bgcolor="#faebd7">-->
+<!--        <td>HU7707</td>-->
+<!--        <td>Hainan Airlines</td>-->
+<!--        <td>PEK</td>-->
+<!--        <td>SZX</td>-->
+<!--        <td>2020/09/20</td>-->
+<!--        <td>22:00</td>-->
+<!--        <td>01:30+1</td>-->
+<!--    </tr>-->
+<!--    <tr bgcolor="#faebd7">-->
+<!--        <td>SC4837</td>-->
+<!--        <td>Shandong Airlines</td>-->
+<!--        <td>CKG</td>-->
+<!--        <td>TAO</td>-->
+<!--        <td>2020/09/20</td>-->
+<!--        <td>07:00</td>-->
+<!--        <td>09:25</td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+<div class="test">
+    <form name="form1">
+        Flight No.:
+        <label>
+            <input type="text" name="flight-no"/>
+        </label>
+        <br/> Airline Company:
+        <label>
+            <input type="text" name="airline-company"/> </label>
+        <br/> From:
+        <label>
+            <input type="text" name="from"/>
+        </label>
+        <br/> To:
+        <label>
+            <input type="text" name="to"/>
+        </label>
+        <br/> Date:
+        <label for="year"></label><select id="year" onchange="setMonth()"></select> year
+        <label for="month"></label><select id="month" onchange="setDay()"></select> month
+        <label for="day"></label><select id="day"></select> day
+        <br/> Departure Time:
+        <label for="dhour"></label><select id="dhour">
+        <option>am</option>
+        <option>pm</option>
+    </select>
+        <label for="dminute"></label><select id="dminute">
+        <option>1</option>
+        <option>2</option>
+    </select>
+        <br/> Arrival Time:
+        <label for="ahour"></label><select id="ahour">
+        <option>am</option>
+        <option>pm</option>
+    </select>
+        <label for="aminute"></label><select id="aminute">
+        <option>1</option>
+        <option>2</option>
+    </select>
+        <br/>
+        <input type="button" value="Add Flight" onclick="addRow()"><br>
+        <br/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            /*background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');*/
+            background-image: url('https://img.zcool.cn/community/038b8875825d539a84a0d304f4290e0.png');
+            background-repeat: repeat-y;
+            background-attachment: initial;
+            background-position: center;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="table1027.css"/>
+    <script type="text/javascript" src="table1027.js">
+    </script>
+</head>
+<body>
+<!--<body onload="initial()">-->
+<table>
+    <caption id="a"><h2>Movie List</h2></caption>
+    <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Movie Hall</th>
+        <th>Price</th>
+        <th>Type</th>
+        <th></th>
+    </tr>
+    <tbody id="tbody" style="display: none">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <input type="button" value="Delete" onclick="removeRow(this)">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="operation_add">
+    <form name="form1">
+        Title:
+        <label>
+            <input type="text" name="title"/>
+        </label>
+        <br/> Date:
+        <!--        <p id="current"></p>-->
+        <!--        <script>-->
+        <!--            document.getElementById("current").innerHTML = GetDateTime();-->
+        <!--        </script>-->
+        <input id="date" onchange="setHour()" type="date" min=""/>
+        <script>
+            function GetDateTime() {
+                n = new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() + 1;
+                var strDate = y + "-" + m + "-" + d
+                // alert(strDate)
+                return strDate
+            }
+            var dateControl = document.querySelector('input[type="date"]');
+            dateControl.value = GetDateTime();
+            document.getElementById("date").min = GetDateTime()
+        </script>
+
+        <!--        <label for="year"></label><select id="year" onchange="setMonth()"></select> year-->
+        <!--        <label for="month"></label><select id="month" onchange="setDay()"></select> month-->
+        <!--        <label for="day"></label><select id="day" onchange="setHall()"></select> day-->
+        <br/> Time:
+        <label for="start-hour"></label><select id="start-hour" onchange="setMinute()"></select> :
+        <label for="start-minute"></label><select id="start-minute" onchange="setHall()"></select>
+        <br/> Duration:
+        <label>
+            <input type="text" name="duration"/>
+        </label>
+        <br/> Movie Hall:
+        <label for="movie-hall"></label><select id="movie-hall"></select>
+        <br/> Price:
+        <label>
+            <input type="text" name="price"/>
+        </label>
+        <br/>
+        <label>
+            <input type="radio" name="choice" value="Ordinary" id="type">Ordinary
+            <input type="radio" name="choice" value="Three D" checked id>Three D
+            <br/>
+        </label>
+        <input type="button" value="Add Movie" onclick="addRow()"><br>
+    </form>
+</div>
+</body>
+</html>
+
+<!--<script type="text/javascript" language="javascript">-->
+<!--    function GetDateTime() {-->
+<!--        n = new Date();-->
+<!--        y = n.getFullYear();-->
+<!--        m = n.getMonth() + 1;-->
+<!--        d = n.getDate();-->
+<!--        document.getElementById("date").min = m + "/" + d + "/" + y-->
+<!--        return m + "/" + d + "/" + y-->
+<!--    }-->
+<!--</script>-->
